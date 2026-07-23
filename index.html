@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Products App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Products App</h1>
+
+    <input type="text" id="search" placeholder="Search Product" onkeyup="applyFilters()">
+
+    <select id="category" onchange="applyFilters()">
+        <option value="all">All Categories</option>
+    </select>
+
+    <select id="sort" onchange="applyFilters()">
+        <option value="">Sort Price</option>
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+    </select>
+
+    <button onclick="applyFilters()">
+        Search / Filter
+    </button>
+
+    <button onclick="resetFilters()">
+        Reset
+    </button>
+
+    <div id="products"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

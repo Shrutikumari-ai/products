@@ -1,0 +1,183 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f7fc;
+    padding:30px;
+    color:#333;
+}
+
+/* Heading */
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#2c3e50;
+    font-size:40px;
+}
+
+/* Search & Filter Section */
+input,
+select,
+button{
+    padding:12px 18px;
+    margin:8px;
+    border:none;
+    border-radius:10px;
+    font-size:15px;
+    outline:none;
+}
+
+input,
+select{
+    background:#fff;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+input{
+    width:280px;
+}
+
+button{
+    background:#4f46e5;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+    font-weight:600;
+}
+
+button:hover{
+    background:#3730a3;
+    transform:translateY(-2px);
+}
+
+/* Center Controls */
+body > input,
+body > select,
+body > button{
+    display:inline-block;
+}
+
+body{
+    text-align:center;
+}
+
+/* Product Grid */
+#products{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Product Card */
+.card{
+    background:rgb(212, 176, 176);
+    border-radius:15px;
+    padding:20px;
+    box-shadow:rgb(115, 114, 119) 10px 14px 40px,rgb(145, 116, 116) 10px 10px 40px ;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 15px 35px rgba(125, 92, 92, 0.15);
+}
+
+/* Image */
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:contain;
+    transition:.3s;
+}
+
+.card:hover img{
+    transform:scale(1.05);
+}
+
+/* Product Name */
+.card h3{
+    margin:15px 0 10px;
+    font-size:18px;
+    color:#222;
+}
+
+/* Description */
+.card p{
+    color:#666;
+    font-size:14px;
+    line-height:1.5;
+    margin-bottom:10px;
+}
+
+/* Price */
+.card h2{
+    color:#4f46e5;
+    margin:12px 0;
+    font-size:24px;
+}
+
+/* Category */
+.card small{
+    display:inline-block;
+    background:#eef2ff;
+    color:#4f46e5;
+    padding:5px 10px;
+    border-radius:20px;
+    font-weight:600;
+    margin-top:10px;
+}
+
+
+
+
+/* Large Tablets */
+@media (max-width: 992px){
+    #products{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px){
+    #products{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1{
+        font-size: 32px;
+    }
+
+    input,
+    select,
+    button{
+        width: 100%;
+        margin: 8px 0;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px){
+    #products{
+        grid-template-columns: 1fr;
+    }
+
+    body{
+        padding: 15px;
+    }
+
+    h1{
+        font-size: 28px;
+    }
+
+    .card img{
+        height: 180px;
+    }
+}
